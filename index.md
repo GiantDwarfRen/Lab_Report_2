@@ -45,26 +45,28 @@ public class StringServer {
 }
 ```
 Here is what I run on my terminal
-![terminal.png][/images/terminal.png]
+![terminal.png][images/terminal.png]
 **initial state**
 The first thing see in my webserver is a white page. 
 Because I set root to just display the String we have so far.
 Since we just initial the server, the `content` should be empty String.
-![root][/images/root.png]
+
+![root][images/root.png]
 **first command**
 The first command is `http://localhost:4003/add-message?s=Vincent%27%20Lab%20Report%202`
 And the website turns out to be:
-![String-1][/images/String-1.png]
+![String-1][images/String-1.png]
 1. This calls `Handler.handleRequest(URI url)` method. It triggers the "else if" branch (line 14)
 2. The argument passes to the method is ``http://localhost:4003/add-message?s=Vincent%27%20Lab%20Report%202`, and `getPath()` would return `/add-message`, and `getQuery()` would return `s=Vincent%27%20Lab%20Report%202`.
 The if statement judges it should go to "else if" branch (line 14), and split the query into `parameters[]` by "=".
 `parameters[0]` would be "s", and `parameters[1]` would be "Vincent%27%20Lab%20Report%202".
 3. Then, content would be appended with a new line character '\n', and then be appended with `parameters[1]`.
 So far, content changes from "" to "\nVincent%27%20Lab%20Report%202".
+
 **Second command**
 The second command is `http://localhost:4003/add-message?s=How%20are%20you`
 And the website turns out to be:
-![String-2][/images/String-2.png]
+![String-2][images/String-2.png]
 1. This calls `Handler.handleRequest(URI url)` method. It triggers the "else if" branch (line 14)
 2. The argument passes to the medthods is `http://localhost:4003/add-message?s=How%20are%20you`, and `getPath()` would return `/add-message`, and `getQuery()` would return `s=How%20are%20you`.
 The if statement judeges it shoud go to "else if" branch (line 14), and split the query into `parameters[]` by "=".
