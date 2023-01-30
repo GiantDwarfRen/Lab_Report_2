@@ -112,11 +112,11 @@ And Below is the failing test case code
 Below is the code for a passing test (The one from the original lab 3 test code):
 ```
 @Test 
-	public void testReverseInPlace() {
-    int[] input1 = { 3 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
-	}
+    public void testReverseInPlace() {
+        int[] input1 = { 3 };
+        ArrayExamples.reverseInPlace(input1);
+        assertArrayEquals(new int[]{ 3 }, input1);
+    }
 ```
 
 3. symptoms
@@ -124,6 +124,8 @@ Below is the code for a passing test (The one from the original lab 3 test code)
 Below is the screenshot of test result
 
 ![fail-test](/images/fail-test.png)
+
+The symptom was that the value at index 2 was 3 but we expect 1. This means the value at index 2 was not reversed( should be the value at index 0).
 
 Here is the image of test result:
 
