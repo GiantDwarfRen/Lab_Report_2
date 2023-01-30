@@ -168,3 +168,8 @@ The test passed because there is only one element in the test array. The for loo
 There are 2 bugs in the original code:
 - It overwrite values at lower half indices by the values at upper half indices, without swapping the values. So, here I declare a new variable “temp” to help swapping.
 - Up till swapping to the half index number, all elements should be correctly swapped. But the for loop continue to traverse all index of the array. This cause values to be swapped back again! So, i set the for loop to stop at half. This works for both odd and even case. For odd case, the middle one does not necessarily have to be swapped. For even case, all values will be swapped correctly.
+
+## part three
+- I used to use Google Test to do unit test, and havn't used Junit before. So, using Junit is a new thing to me.
+- Never tried setting up my own web server before. First time!
+- A really fun fact I learnt in lab section that wifi signal at lab room is the weakest in entire campus! I had a really hard time trying to connect to internet. University should fix that problem!
